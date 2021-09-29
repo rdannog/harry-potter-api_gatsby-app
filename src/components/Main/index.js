@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Text, Image, Card, PostCard, Details, GlobalStyle} from './style'
+import { Text, Image, Card, PostCard, DetailBox, Details, GlobalStyle} from './style'
 import {api} from '../../services/api'
 
 export function Main(){
@@ -17,8 +17,10 @@ export function Main(){
                     <PostCard>
                     <Text key={index}>{item.name}</Text>
                     <Image src={item.image}/>
-                    <Details><strong>House:</strong> {item.house}</Details>
-                    <Details><strong>Species:</strong> {item.species}</Details>
+                    <DetailBox>
+                        <Details><strong>House:</strong> {item.house}</Details>
+                        <Details><strong>Species:</strong> {item.species}</Details>
+                    </DetailBox>
                     </PostCard>
                     
                 ) )}
