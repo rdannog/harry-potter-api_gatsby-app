@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Text, Image, Card, PostCard, Container, Details} from './style'
+import { Text, Image, Card, PostCard, Details, GlobalStyle} from './style'
 import {api} from '../../services/api'
 
 export function Main(){
@@ -10,7 +10,8 @@ export function Main(){
     }, [])
 
     return(
-        <Container>
+        <div>
+            <GlobalStyle/>
             <Card>
                 {list.map((item, index) => (
                     <PostCard>
@@ -18,11 +19,10 @@ export function Main(){
                     <Image src={item.image}/>
                     <Details><strong>House:</strong> {item.house}</Details>
                     <Details><strong>Species:</strong> {item.species}</Details>
-                    <Details><strong>Ancestry:</strong> {item.ancestry}</Details>
                     </PostCard>
                     
                 ) )}
             </Card>
-        </Container>
+        </div>
     )
 }
