@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Text, Image, Card, PostCard, DetailBox, Details, GlobalStyle} from './style'
+import { Text, Image, Card, PostCard, DetailBox, Details} from './style'
 import {api} from '../../services/api'
 
 export function Main(){
@@ -11,7 +11,6 @@ export function Main(){
 
     return(
         <div>
-            <GlobalStyle/>
             <Card>
                 {list.map((item, index) => (
                     <PostCard>

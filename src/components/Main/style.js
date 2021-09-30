@@ -1,37 +1,25 @@
 import styled from 'styled-components'
-import { createGlobalStyle } from 'styled-components'
-import Background from "/home/vai-na-web/Documentos/cardlist/src/images/background.jpeg"
 
-export const GlobalStyle= createGlobalStyle`
-body{
-  @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+export const Text = styled.h2`
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
 
-  background-image: url(${Background});
-  background-size:contain;
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-`
-export const Text=styled.h2`
     font-size: 1.5rem;
     font-weight: bolder;
     font-family: 'Megrim', cursive;
 
 `
-export const Image=styled.img`
+export const Image = styled.img`
     width:13.2vw;
     max-height:45vh;
 `
-export const Card=styled.div`
+export const Card = styled.div`
     display:flex;
     flex-wrap:wrap;
     align-items:center;
     justify-content:space-around;
     
 `
-export const PostCard=styled.div`
+export const PostCard = styled.div`
     width:20vw;
     height:75vh;
     margin:2vw 2vh;
@@ -49,19 +37,20 @@ export const PostCard=styled.div`
         transform: scale(1.05);
     }
 `
-export const DetailBox=styled.div`
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:space-around;
-width:100%;
+export const DetailBox = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    width:100%;
 `
-export const Details=styled.p`
+export const Details = styled.p`
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');    
     width:80%;
     padding:0.8vw 1vh;
     text-align:center;
     border-radius:12px;
-    font-size: 1vw;
-    font-family: 'Michroma', sans-serif;
     background-color:gray;
-    `
+    font-family: 'Raleway', sans-serif;
+    cursor:pointer;
+`
