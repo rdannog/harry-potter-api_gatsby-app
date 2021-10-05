@@ -1,16 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import Logo from "../../images/logo.png"
-import { BoxLogo, LogoImg } from "./style"
 import { Link } from "gatsby"
+import React from "react"
+import Logo from "../../images/logo.png"
+import { BoxLogo, LogoImg, StyledLink, Navigation, List } from "./style"
 
-const StyledLink = styled(Link)`
-    @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
-    
-    color: white;
-    font-size:3vw;
-    font-weight:bolder;
-`
+
+
 
 export function Header(){
 
@@ -25,10 +19,12 @@ export function Header(){
     return(
         <>
         <BoxLogo>
-            <LogoImg src={Logo} alt="logo Harry Potter"/>
+            <Link to="/">
+                <LogoImg src={Logo} alt="logo Harry Potter"/>
+            </Link> 
         </BoxLogo>
-        <nav>
-            <ul style={listStyle}>
+        <Navigation>
+            <List style={listStyle}>
                 <li>
                     <StyledLink style={linkStyle} to="/">Home</StyledLink>
                 </li>
@@ -38,8 +34,8 @@ export function Header(){
                 <li>
                     <StyledLink style={linkStyle} to="/Movies">Movies</StyledLink>
                 </li>
-            </ul>
-        </nav>
+            </List>
+        </Navigation>
         </>
     )
 }

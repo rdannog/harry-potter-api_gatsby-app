@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import Background from '../images/background.jpeg'
 
 export const GlobalStyle= createGlobalStyle`
-body{
+html{
   background-image: url(${Background});
   background-size:contain;
   margin:0;
